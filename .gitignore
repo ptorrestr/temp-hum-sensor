@@ -1,0 +1,6 @@
+# Platformio
+.pioenvs/
+.piolibdeps/
+
+# Secrets
+*_secret
