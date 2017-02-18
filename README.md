@@ -11,6 +11,11 @@ platformio run
 ```bash
 platformio run -t upload
 ```
+# Test device
+```bash
+platformio run -t upload && platformio device monitor -b 115200
+```
+
 
 You need to define the following properties in your build environment variabl (PLATFORMIO\_BUILD\_FLAGS)
 - SSID
