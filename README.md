@@ -17,11 +17,11 @@ platformio run -t upload && platformio device monitor -b 115200
 ```
 
 
-You need to define the following properties in your build environment variable (`PLATFORMIO\_BUILD\_FLAGS`) or `in platformio.ini`
-- SSID
-- PASSWORD
-- THINGSPEAK\_HOST
-- THINGSPEAK\_API\_KEY
+You need to define the following properties in your build environment variable (`PLATFORMIO_BUILD_FLAGS`) or `in platformio.ini`
+- `SSID`
+- `PASSWORD`
+- `THINGSPEAK_HOST`
+- `THINGSPEAK_API_KEY`
 
 Example:
 ```bash
