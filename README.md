@@ -16,8 +16,7 @@ platformio run -t upload
 platformio run -t upload && platformio device monitor -b 115200
 ```
 
-
-You need to define the following properties in your build environment variable (`PLATFORMIO_BUILD_FLAGS`) or `in platformio.ini`
+You need to define the following properties in your build environment variable (`PLATFORMIO_BUILD_FLAGS`) or in `platformio.ini`
 - `SSID`
 - `PASSWORD`
 - `THINGSPEAK_HOST`
