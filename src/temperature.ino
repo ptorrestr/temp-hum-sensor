@@ -29,6 +29,10 @@ const char* key       = THINGSPEAK_API_KEY_value;
 // Initialize the temperature/ humidity sensor
 DHT dht(DHTPIN, DHTTYPE);
 
+// Settings for voltage
+ADC_MODE(ADC_VCC);
+
+// Data structures
 const int UPDATE_INTERVAL_SECONDS = 300;
 
 typedef struct data {
