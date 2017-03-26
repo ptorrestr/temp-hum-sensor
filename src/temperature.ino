@@ -54,7 +54,7 @@ void setup() {
 
   Serial.println();
   Serial.println("closing connection");
-  ESP.deepSleep(1 * 60 * 1000000, WAKE_RF_DEFAULT); //, WAKE_RF_DISABLED);  //sleep 1 second
+  ESP.deepSleep(UPDATE_INTERVAL_SECONDS * 1000000, WAKE_RF_DEFAULT);
 }
 
 void loop() {
