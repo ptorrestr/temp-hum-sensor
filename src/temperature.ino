@@ -21,13 +21,11 @@ const char* host      = THINGSPEAK_HOST_value;
 const char* key       = THINGSPEAK_API_KEY_value;
 
 // DHT Settings
-#define DHTPIN D6     // what digital pin we're connected to. If you are not using NodeMCU change D6 to real pin
-// Uncomment whatever type you're using!
+#define DHTPIN 2     // ESP01
 #define DHTTYPE DHT11   // DHT 11
-//#define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321
-//#define DHTTYPE DHT21   // DHT 21 (AM2301)
+
 // Initialize the temperature/ humidity sensor
-DHT dht(DHTPIN, DHTTYPE);
+DHT dht(DHTPIN, DHTTYPE, 15);
 
 // Settings for voltage
 ADC_MODE(ADC_VCC);
@@ -41,12 +39,16 @@ typedef struct data {
   uint16_t voltage;
 } DATA;
 
+extern "C" {
+  #include "user_interface.h"
+}
+
 /***************************
  * End Settings
  **************************/
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(15200);
   delay(10);
   
   connectWifi();
